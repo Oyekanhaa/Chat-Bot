@@ -70,7 +70,7 @@ with Client("session", api_id=api_id, api_hash=api_hash) as app:
 ## 🛠️ Manual Deploy
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
+git clone https://github.com/TheAloneTeam/Id-ChatBot
 cd YOUR_REPO
 
 pip install -r requirements.txt
