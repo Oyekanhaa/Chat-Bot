@@ -1,23 +1,53 @@
 {
-  "name": "chatbot-userbot",
-  "description": "Private userbot AI chatbot using Pyrogram, MongoDB, and Together API",
+  "name": "MeowChat AI Bot",
+  "description": "Telegram AI Chatbot with admin control using Pyrogram, MongoDB, and API system.",
+  "logo": "https://telegra.ph/file/5d9c4e5c1f5c2c2c2c2c2.jpg",
+  "keywords": [
+    "telegram",
+    "bot",
+    "chatbot",
+    "pyrogram",
+    "ai",
+    "mongodb"
+  ],
+
+  "website": "https://github.com/TheAloneTeam/Id-ChatBot",
+  "repository": "https://github.com/TheAloneTeam/Id-ChatBot",
+  "success_url": "https://github.com/TheAloneTeam",
+
   "env": {
     "API_ID": {
-      "description": "Get from https://my.telegram.org"
+      "description": "Get from https://my.telegram.org",
+      "required": true
     },
     "API_HASH": {
-      "description": "Get from https://my.telegram.org"
+      "description": "Get from https://my.telegram.org",
+      "required": true
     },
-    "STRING_SESSION": {
-      "description": "Pyrogram string session for userbot"
+    "BOT_TOKEN": {
+      "description": "Get from @BotFather",
+      "required": true
     },
-    "OWNER_ID": {
-      "description": "Your Telegram user ID"
+    "MONGO_URL": {
+      "description": "MongoDB connection URL (Atlas recommended)",
+      "required": true
+    },
+    "API_URL": {
+      "description": "Your chatbot API endpoint",
+      "required": true
     }
   },
+
   "buildpacks": [
     {
       "url": "heroku/python"
     }
-  ]
+  ],
+
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
 }
