@@ -8,11 +8,8 @@ from pyrogram.types import Message
 from MeowChat import app
 from MeowChat.utils.admins import admin_check
 
-# ================== CONFIG ==================
-
-API_URL = ""
-MONGO_URL = ""
-
+API_URL = os.getenv("API_URL")
+MONGO_URL = os.getenv("MONGO_URL")
 mongo = AsyncIOMotorClient(MONGO_URL)
 db = mongo["chatbot"]
 col = db["status"]
