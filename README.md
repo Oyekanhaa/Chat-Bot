@@ -1,24 +1,24 @@
-🤖 MeowChat Userbot
+# 🤖 MeowChat Userbot
 
 A powerful Telegram Userbot AI Chatbot built with Pyrogram + MongoDB + API system.
 
 ---
 
-🚀 Features
+## 🚀 Features
 
-- 🤖 AI Chatbot (API based replies)
-- 👤 Runs on your Telegram account (Userbot)
-- 🔄 "/chatbot" ON/OFF toggle system
-- 👑 Admin / Owner control
-- 💾 MongoDB database (chat status saving)
-- ⚡ Fast async system (httpx + motor)
-- 🧠 Custom prompt support ("prompt.txt")
-- 🔐 Secure config system ("config.py")
-- 🚀 Heroku deploy ready
+- AI Chatbot (API based replies)
+- Runs on your Telegram account (Userbot)
+- /chatbot ON/OFF toggle system
+- Admin / Owner control
+- MongoDB database (chat status saving)
+- Fast async system (httpx + motor)
+- Custom prompt support (prompt.txt)
+- Secure config system (config.py)
+- Heroku deploy ready
 
 ---
 
-📦 Requirements
+## 📦 Requirements
 
 - Python 3.10+
 - MongoDB Database (Atlas recommended)
@@ -27,7 +27,7 @@ A powerful Telegram Userbot AI Chatbot built with Pyrogram + MongoDB + API syste
 
 ---
 
-🔐 Environment Variables
+## 🔐 Environment Variables
 
 API_ID=your_api_id
 API_HASH=your_api_hash
@@ -38,10 +38,12 @@ OWNER_ID=your_telegram_id
 
 ---
 
-🔑 Generate STRING_SESSION
+## 🔑 Generate STRING_SESSION
 
 pip install pyrogram tgcrypto
 python3
+
+Then run:
 
 from pyrogram import Client
 
@@ -53,15 +55,15 @@ with Client("session", api_id=api_id, api_hash=api_hash) as app:
 
 ---
 
-🚀 Deploy to Heroku
+## 🚀 Deploy to Heroku
 
-🟣 One Click Deploy
+One Click Deploy:
 
-""Deploy" (https://www.herokucdn.com/deploy/button.svg)" (https://dashboard.heroku.com/new?template=https://github.com/TheAloneTeam/Id-ChatBot)
+https://dashboard.heroku.com/new?template=https://github.com/riteshxcoder/Chatbot
 
 ---
 
-🛠️ Manual Deploy
+## 🛠️ Manual Deploy
 
 git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
 cd YOUR_REPO
@@ -71,7 +73,7 @@ python main.py
 
 ---
 
-📁 Project Structure
+## 📁 Project Structure
 
 MeowChat/
 ├── plugins/
@@ -87,14 +89,13 @@ MeowChat/
 
 ---
 
-💬 Commands
+## 💬 Commands
 
-Command| Description
-/chatbot| Enable / Disable chatbot
+/chatbot → Enable / Disable chatbot
 
 ---
 
-⚠️ Notes
+## ⚠️ Notes
 
 - Works in groups
 - Default OFF
@@ -103,13 +104,13 @@ Command| Description
 
 ---
 
-🛡️ Disclaimer
+## 🛡️ Disclaimer
 
 This is a userbot. Use responsibly.
 
 ---
 
-❤️ Credits
+## ❤️ Credits
 
 - Pyrogram
 - MongoDB
@@ -117,12 +118,12 @@ This is a userbot. Use responsibly.
 
 ---
 
-👑 Owner
+## 👑 Owner
 
 Made with ❤️ by You
 
 ---
 
-⭐ Support
+## ⭐ Support
 
 Give a ⭐ if you like this project!
