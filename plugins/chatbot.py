@@ -7,8 +7,8 @@ from motor.motor_asyncio import AsyncIOMotorClient
 from MeowChat import app
 
 # ================== CONFIG ==================
-API_URL = "https://apiaashik.vercel.app/api/chat/MeowMusic"
-MONGO_URL = "mongodb+srv://meow:meow@cluster0.tml9bsv.mongodb.net/?appName=Cluster0"
+API_URL = ""
+MONGO_URL = ""
 
 mongo = AsyncIOMotorClient(MONGO_URL)
 db = mongo["chatbot"]
