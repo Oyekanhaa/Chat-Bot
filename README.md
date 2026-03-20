@@ -3,11 +3,11 @@
 A powerful Telegram Userbot AI Chatbot built with **Pyrogram + MongoDB + API system**.
 
 ---
-## 🌐 Chatbot API
+## ❤️ Support
 
-If you need a chatbot API, contact:
+💬 **Telegram:** [MeowChat](https://t.me/TheTeamHacker)  
 
-👉 **@meowqti**
+🆘 **Need API or Help? DM:** [ApiUrl](https://t.me/meowqti)
 
 
 ## 🚀 Features
