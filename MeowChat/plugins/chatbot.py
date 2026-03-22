@@ -1,5 +1,4 @@
 import os
-
 import httpx
 from motor.motor_asyncio import AsyncIOMotorClient
 from pyrogram import enums, filters
@@ -15,8 +14,11 @@ mongo = AsyncIOMotorClient(MONGO_URL)
 db = mongo["chatbot"]
 col = db["status"]
 
-# ================== PROMPT ==================
+# ================== SETTINGS ==================
 
+TRIGGER_WORDS = ["hello", "hi", "bot"]  # apne hisab se add kar
+
+# ================== PROMPT ==================
 
 def load_prompt():
     try:
@@ -26,19 +28,15 @@ def load_prompt():
     except Exception:
         return ""
 
-
 PROMPT = load_prompt()
 
 # ================== STATUS ==================
-
 
 async def is_enabled(chat_id: int) -> bool:
     data = await col.find_one({"chat_id": chat_id})
     return data.get("enabled", False) if data else False
 
-
-# ================== TOGGLE ==================
-
+# ================== TOGGLE COMMAND ==================
 
 @app.on_message(filters.command("chatbot"))
 async def toggle_chatbot(client, message: Message):
@@ -67,9 +65,7 @@ async def toggle_chatbot(client, message: Message):
     status = "ON ✅" if new else "OFF ❌"
     await message.reply_text(f"🤖 Chatbot is now {status}")
 
-
-# ================== MAIN ==================
-
+# ================== MAIN CHATBOT ==================
 
 @app.on_message(filters.text & ~filters.command(["chatbot"]))
 async def chatbot_reply(client, message: Message):
@@ -85,6 +81,29 @@ async def chatbot_reply(client, message: Message):
 
     if not message.text:
         return
+
+    text = message.text.lower()
+
+    # ================== CONDITIONS ==================
+
+    should_reply = False
+
+    # 1. Reply to bot message
+    if message.reply_to_message:
+        if (
+            message.reply_to_message.from_user
+            and message.reply_to_message.from_user.is_bot
+        ):
+            should_reply = True
+
+    # 2. Trigger word
+    if any(word in text for word in TRIGGER_WORDS):
+        should_reply = True
+
+    if not should_reply:
+        return
+
+    # ================== API CALL ==================
 
     final_text = f"{PROMPT}\nUser: {message.text}"
     payload = {"message": final_text}
