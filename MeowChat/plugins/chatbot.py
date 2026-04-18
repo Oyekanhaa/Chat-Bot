@@ -5,8 +5,8 @@ from pyrogram import enums, filters
 from pyrogram.types import Message
 
 from config import API_URL, MONGO_URL
-from MeowChat import app
-from MeowChat.utils.admins import admin_check
+from AnuChat import app
+from AnuChat.utils.admins import admin_check
 
 # ================== DATABASE ==================
 
