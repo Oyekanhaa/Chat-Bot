@@ -1,11 +1,11 @@
-# 🤖 MeowChat Userbot
+# 🤖 AnuChat Userbot
 
 A powerful Telegram Userbot AI Chatbot built with **Pyrogram + MongoDB + API system**.
 
 ---
 ## ❤️ Support
 
-💬 **Telegram:** [MeowChat](https://t.me/TheTeamHacker)  
+💬 **Telegram:** [AnuChat](https://t.me/TheTeamHacker)  
 
 🆘 **Need API or Help? DM:** [ApiUrl](https://t.me/meowqti)
 
@@ -88,7 +88,7 @@ python main.py
 ## 📁 Project Structure
 
 ```
-MeowChat/
+AnuChat/
 ├── plugins/
 │   └── chatbot.py
 ├── utils/
