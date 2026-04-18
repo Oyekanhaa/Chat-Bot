@@ -1,4 +1,4 @@
-import MeowChat.plugins.chatbot
-from MeowChat import app
+import AnuChat.plugins.chatbot
+from AnuChat import app
 
 app.run()
